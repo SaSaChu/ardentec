@@ -41,4 +41,19 @@ $(function () {
   $(".spic, .banner_page").imgLiquid ();
 
 
+
+  // banner
+  $('.index-banners').each (function () {
+    var $that = $(this).attr ('data-i', 1);
+    $that.find ('.bg').imgLiquid ({ verticalAlign:'center' });
+    var l = $that.find ('>div>*').length;
+    $that.find ('>a').click (function () {
+      var i = parseInt ($that.attr ('data-i'), 10);
+      $that.attr ('data-i', $(this).hasClass ('left') ? (--i <= 0 ? l : i) : (++i > l ? 1 : i));
+    });
+    setInterval (function () {
+      $that.find ('>a.left').click ();
+    }, 6500);
+  });
+
 });
