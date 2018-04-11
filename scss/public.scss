@@ -51,6 +51,8 @@ $c_footer: rgba(208, 209, 211, 1.00);
 
 
 header {
+  position: relative;
+  z-index: 10;
   display: inline-block;
   width: 100%;
   border-top: 5px solid $c_orange;
@@ -141,9 +143,115 @@ header {
           @include range-width(450px, 1110px) {
             margin-top: 8px;
           }
+          > div {
+            cursor: default;
+            &:hover {
+              > div {
+                // display: inline-block;
+                height: 100px;
+                border-bottom: 1px solid rgba(163, 163, 163, 1.00);
+
+                top: calc(100% - 47px);
+
+                padding-top: 47px;
+                padding-bottom: 30px;
+                @include opacity(1);
+
+                @include range-width(0, 1110px) {
+                  top: calc(100% - 30px);
+                  padding-top: 30px;
+                };
+              }
+              &:after {
+                display: inline-block;
+              }
+            }
+            &:after {
+              content: '';
+              position: absolute;
+              margin-top: 5px + 6px;
+              margin-left: -10px;
+              display: none;
+              width: 10px;
+              height: 10px;
+              border: 1px solid rgba(163, 163, 163, 1.00);
+              border-bottom: 0;
+              border-right: 0;
+              @include rotate(45deg);
+              z-index: 2;
+              background-color: white;
+              @include range-width(0, 1110px) {
+                margin-top: 5px + 6px;
+              }
+            }
+            > div {
+              // display: none;
+              display: inline-block;
+              
+              position: absolute;
+              z-index: 1;
+              border-bottom: 1px solid rgba(163, 163, 163, 1.00);
+
+              top: calc(100% - 47px);
+              left: 0;
+              padding-top: 47px;
+              padding-bottom: 30px;
+
+
+              width: 100%;
+              background-color: white;
+              text-align: center;
+
+              @include range-width(0, 1110px) {
+                top: calc(100% - 30px);
+                padding-top: 30px;
+              };
+
+              height: 0;
+              padding-top: 0;
+              padding-bottom: 0;
+              border-bottom: 0;
+              overflow: hidden;
+              @include opacity(0);
+              @include transition(all .3s);
+
+              &:before {
+                position: absolute;
+                left: 0;
+                top: 16px;
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background-color: rgba(163, 163, 163, 1.00);
+                content: '';
+              }
+              > div {
+                margin: 0 auto;
+                display: inline-block;
+                @include clearfix();
+
+                > * {
+                  cursor: pointer;
+                  text-decoration: none;
+                  float: left;
+                  display: inline-block;
+                  padding: 0 8px;
+                  color: rgba(115, 115, 115, 1.00);
+
+                  &:nth-child(n + 8) {
+                    margin-top: 12px;
+                  }
+                  &:hover {
+                    color: rgba(219, 62, 56, 1.00);
+                  }
+
+                }
+              }
+            }
+          }
         }
 
-        > a {
+        > a, > div {
           display: inline-block;
           cursor: pointer;
           float: right;
@@ -1250,10 +1358,205 @@ header {
 
 
 .work_boxs {
+  position: relative;
   display: inline-block;
   width: 100%;
   background-color: $c_orange;
   padding: 100px 0 130px 0;
+  @include range-width(0, 1200px) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  > a {
+    position: absolute;
+    z-index: 3;
+    top: calc(50% - 32px / 2);
+    left: 8px;
+    + a {
+      left: auto;
+      right: 8px;
+    }
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .8);
+    @include transition(color .3s);
+    cursor: pointer;
+
+    &:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  .aa {
+    position: absolute;
+    left: calc(100% / 3 - 300px + 10px);
+    top: 0;
+    display: inline-block;
+    width: 300px;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(229, 58, 41, 1);
+    b {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-top: 32px;
+      text-align: left;
+      padding-left: 16px;
+      font-size: 20px;
+      color: white;
+
+      &:after {
+        position: absolute;
+        left: 16px;
+        bottom: -4px;
+        display: inline-block;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        content: '';
+      }
+    }
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 100px;
+      display: inline-block;
+      height: calc(100% - 100px * 2);
+      width: 1px;
+      background-color: rgba(202, 51, 30, 1.00);
+    }
+    &:before {
+      left: 8px;
+    }
+    &:after {
+      right: 8px;
+    }
+    span {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-top: 32px + 16px;
+      text-align: left;
+      padding-left: 20px;
+      font-size: 22px;
+      color: white;
+      padding-right: 20px;
+    }
+    a {
+      position: absolute;
+      top: 100px + 430px - 22px;
+      left: 20px;
+      display: inline-block;
+      color: white;
+      text-decoration: none;
+      line-height: 22px;
+    }
+    @include range-width(0, 1200px) {
+      height: 30px;
+      width: 100%;
+
+      left: 32px;
+      a {
+        display: none;
+      }
+      span {
+        margin-top: 16px;
+        font-size: 16px;
+        padding-left: 16px;
+      }
+    }
+  }
+
+  .bb {
+    display: inline-block;
+    width: 100%;
+    height: 585px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    @include range-width(0, 1200px) {
+      height: auto;
+    }
+    
+    > * {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: inline-block;
+      // width: 685px;
+      width: calc(100% / 3);
+      text-align: left;
+      @include transition(left .3s);
+      @include range-width(0, 1200px) {
+        width: 100%;
+      }
+      ._ic {
+        width: 100%;
+        height: 430px;
+        @include range-width(0, 450px) {
+          height: 240px;
+        }
+        @include range-width(450px, 650px) {
+          height: 300px;
+        }
+      }
+      b {
+        color: rgba(251, 225, 223, 1.00);
+        font-size: 18px;
+        display: inline-block;
+        width: 100%;
+        height: 44px;
+        line-height: 44px;
+      }
+      time {
+        display: inline-block;
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        color: rgba(83, 37, 32, 1.00);
+        margin-bottom: 16px;
+      }
+      p {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+        line-height: 24px;
+        color: rgba(249, 175, 164, 1.00);
+      }
+      a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        line-height: 22px;
+      }
+    }
+    @for $i from 1 through 10 {
+      &[data-i='#{$i}'] {
+        @for $j from 1 through 10 {
+          >*:nth-child(#{$j - 1}) {
+            @include opacity(.5);
+            left: calc((100% / 3 + 10px) * #{$j - $i});
+            @if($i == $j - 1) {
+              @include opacity(1);
+            }
+            @include range-width(0, 1200px) {
+              padding: 0 48px;
+              @include opacity(0);
+              left: calc(100% * #{$j - $i - 1});
+              @if($i == $j - 1) {
+                @include opacity(1);
+                position: relative;
+              }
+            };
+          }
+        }
+      }
+    }
+  }
 }
 
 
