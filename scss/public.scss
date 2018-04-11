@@ -175,33 +175,40 @@ header {
           @include border-radius(2px);
           border: 1px solid $c_de_gray;
 
-          #search {
+          .container-1 {
             display: inline-block;
-            outline: 0;
-            border: 0;
-            line-height: 28px;
-            padding: 0 10px;
-            float: left;
-            appearance:none;
-            -moz-appearance:none;
-            -webkit-appearance:none;
-            font-size: 13px;
-            color: $c_black;
-            font-weight: 600;
-            background-color: transparent;
-          }
+            width: 100%;
 
-          .icon {
-            display: inline-block;
-            border: 0;
-            outline: 0;
-            font-size: 13px;
-            color: $c_gray;
-            font-weight: 600;
-            line-height: 28px;
-            float: right;
-            background-color: transparent;
-            cursor: pointer;
+            #search {
+              display: inline-block;
+              width: calc(100% - 70px);
+              margin: 0;
+              outline: 0;
+              border: 0;
+              line-height: 28px;
+              padding: 0 10px;
+              float: left;
+              appearance:none;
+              -moz-appearance:none;
+              -webkit-appearance:none;
+              font-size: 13px;
+              color: $c_black;
+              font-weight: 600;
+              background-color: transparent;
+            }
+
+            .icon {
+              display: inline-block;
+              border: 0;
+              outline: 0;
+              font-size: 13px;
+              color: $c_gray;
+              font-weight: 600;
+              line-height: 20px;
+              float: right;
+              background-color: transparent;
+              cursor: pointer;
+            }
           }
         }
 
@@ -432,34 +439,39 @@ header {
       border: 1px solid $c_de_gray;
       margin-right: 10px;
 
-      #search {
+      .container-1 {
         display: inline-block;
-        width: 100px;
-        outline: 0;
-        border: 0;
-        line-height: 28px;
-        padding: 0 10px;
-        float: left;
-        appearance:none;
-        -moz-appearance:none;
-        -webkit-appearance:none;
-        font-size: 13px;
-        color: white;
-        font-weight: 600;
-        background-color: transparent;
-      }
+        width: 100%;
 
-      .icon {
-        display: inline-block;
-        border: 0;
-        outline: 0;
-        font-size: 13px;
-        color: $c_gray;
-        font-weight: 600;
-        line-height: 28px;
-        float: right;
-        background-color: transparent;
-        cursor: pointer;
+        #search {
+          display: inline-block;
+          width: calc(100% - 30px);
+          outline: 0;
+          border: 0;
+          line-height: 28px;
+          padding: 0 10px;
+          float: left;
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+          font-size: 13px;
+          color: white;
+          font-weight: 600;
+          background-color: transparent;
+        }
+
+        .icon {
+          display: inline-block;
+          border: 0;
+          outline: 0;
+          font-size: 13px;
+          color: $c_gray;
+          font-weight: 600;
+          line-height: 28px;
+          float: right;
+          background-color: transparent;
+          cursor: pointer;
+        }
       }
     }
 
