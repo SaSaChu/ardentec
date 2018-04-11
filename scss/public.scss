@@ -405,15 +405,21 @@ header {
       background-color: $c_orange;
     }
   }
-  // > span {
-  //   &:before {
-  //     display: inline-block;
-  //     content: '\e902';
-  //     font-family: 'icomoon';
-  //     font-size: 22px;
-  //     margin-right: 10px;
-  //   }
-  // }
+  > span {
+    &:after {
+      display: inline-block;
+      content: '\e904';
+      font-family: 'icomoon';
+      font-size: 22px;
+      float: right;
+    }
+
+    &:first-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
   > div {
     display: none;
   }
@@ -425,6 +431,14 @@ header {
     }
    
     &.s {
+      &:after {
+        -moz-transform:rotate(90deg);
+        -webkit-transform:rotate(90deg);
+        -o-transform:rotate(90deg);
+        -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+      }
+
       + div {
         display: block;
       }
@@ -863,14 +877,22 @@ header {
               top: 0;
               left: 0;
               display: inline-block;
-              padding: 3px 5px;
               color: white;
-              padding: 0 8px;
+              padding: 3px 8px;
               background-color: $c_orange;
               @include border-radius(3px);
               font-weight: 600;
               font-style: normal;
-              @include animation(new .4s linear infinite);
+
+              animation: move .5s ease-in-out infinite alternate;
+              -moz-animation: move .5s ease-in-out infinite alternate; /* Firefox */
+              -webkit-animation: move .5s ease-in-out infinite alternate; /* Safari and Chrome */
+              -o-animation: move .5s ease-in-out infinite alternate; /* Opera */
+
+              @keyframes move {
+                0% {transform: translateY(-8px);}
+                100% {transform: translateY(2px);}
+              }
 
               @include range-width(0, 450px) {
                 font-size: 13px;
