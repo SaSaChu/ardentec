@@ -6,6 +6,15 @@
   @include font-smoothing(antialiased);
 }
 
+.icon-arrow_forward:before {
+  content: "\e5c8";
+}
+.icon-menu:before {
+  content: "\e90a";
+}
+.icon-search:before {
+  content: "\e90b";
+}
 .icon-chevron-down:before {
   content: "\e902";
 }
@@ -32,10 +41,4 @@
 }
 .icon-chevron-up:before {
   content: "\e908";
-}
-.icon-menu:before {
-  content: "\e90a";
-}
-.icon-search:before {
-  content: "\e90b";
 }

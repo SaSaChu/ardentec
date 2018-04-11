@@ -29,8 +29,16 @@ $(function () {
   });
 
 
+  $('.page_l').each (function () {
+    var $that = $(this);
+    $that.find ('span').click (function () {
+      $(this).toggleClass ('pp');
+    });
+  });
+
+
    // 圖片縮放
-  $(".spic").imgLiquid ();
+  $(".spic, .banner_page").imgLiquid ();
 
 
 });
