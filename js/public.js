@@ -38,7 +38,18 @@ $(function () {
 
 
    // 圖片縮放
-  $(".spic, .banner_page").imgLiquid ();
+  $(".spic, .banner_page, ._ic").imgLiquid ();
+  $(".work_boxs").each (function () {
+    var $that = $(this);
+
+    var $bb = $that.find ('.bb').attr ('data-i', 2);
+    var l = $bb.find ('>*').length;
+    
+    $that.find ('>a').click (function () {
+      var i = parseInt ($bb.attr ('data-i'), 10);
+      $bb.attr ('data-i', $(this).hasClass ('.icon-chevron-left') ? (--i <= 0 ? l : i) : (++i > l ? 1 : i));
+    });
+  });
 
 
 
