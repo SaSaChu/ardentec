@@ -171,8 +171,10 @@ header {
             &:after {
               content: '';
               position: absolute;
-              margin-top: 5px + 6px;
-              margin-left: -10px;
+              // margin-top: 5px + 6px;
+              // margin-left: -10px;
+              margin-top: 33px;
+              margin-left: -37px;
               display: none;
               width: 10px;
               height: 10px;
