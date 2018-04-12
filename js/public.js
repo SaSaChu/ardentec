@@ -38,7 +38,7 @@ $(function () {
 
 
    // 圖片縮放
-  $(".spic, .banner_page, ._ic, .flexslider, .slides").imgLiquid ();
+  $(".spic, .banner_page, ._ic, .flexslider li, .slides").imgLiquid ();
   $(".work_boxs").each (function () {
     var $that = $(this);
 
