@@ -124,6 +124,8 @@ header {
   @media screen and (max-width: 449px) and (min-width: 0) {
     header {
       position: fixed;
+      top: 0;
+      left: 0;
       -moz-box-shadow: 0 0 10px #989696;
       -webkit-box-shadow: 0 0 10px #989696;
       box-shadow: 0 0 10px #989696; } }
@@ -937,6 +939,116 @@ header {
       height: 77px;
       margin-top: 58px; } }
 
+/* flexslider */
+.flexslider {
+  position: relative;
+  width: 100%;
+  height: 695px;
+  overflow: hidden; }
+  @media screen and (max-width: 449px) and (min-width: 0) {
+    .flexslider {
+      width: 100%;
+      height: 275px; } }
+
+.slides {
+  position: relative;
+  z-index: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .slides li {
+    width: 100%;
+    height: 695px; }
+    @media screen and (max-width: 449px) and (min-width: 0) {
+      .slides li {
+        width: 100%;
+        height: 275px; } }
+    .slides li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      text-indent: -9999px; }
+    .slides li .bt_boxs {
+      display: inline-block;
+      width: 100%;
+      height: 160px;
+      background-color: rgba(127, 127, 127, 0.5);
+      position: absolute;
+      z-index: 3;
+      left: 0;
+      bottom: 0; }
+      @media screen and (max-width: 449px) and (min-width: 0) {
+        .slides li .bt_boxs {
+          height: 80px; } }
+      .slides li .bt_boxs p {
+        display: inline-block;
+        width: 100%;
+        color: white;
+        font-size: 22px;
+        padding: 20px 0 0 0;
+        margin: 0; }
+        @media screen and (max-width: 949px) and (min-width: 450px) {
+          .slides li .bt_boxs p {
+            font-size: 18px;
+            padding: 15px 20px; } }
+        @media screen and (max-width: 449px) and (min-width: 0) {
+          .slides li .bt_boxs p {
+            padding: 10px 20px;
+            font-size: 15px; } }
+    .slides li div {
+      display: inline-block;
+      width: 100%;
+      height: 695px; }
+      .slides li div img {
+        width: 100%; }
+
+.flex-control-nav {
+  position: absolute;
+  bottom: 10px;
+  z-index: 5;
+  width: 100%;
+  text-align: center; }
+  .flex-control-nav li {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 05px;
+    *display: inline;
+    zoom: 1; }
+  .flex-control-nav a {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    line-height: 40px;
+    overflow: hidden;
+    background: url(../img/dot.png) right 0 no-repeat transparent;
+    cursor: pointer;
+    text-decoration: none; }
+    @media screen and (max-width: 449px) and (min-width: 0) {
+      .flex-control-nav a {
+        display: none; } }
+  .flex-control-nav .flex-active {
+    background-position: 0 0; }
+
+.flex-direction-nav {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  width: 100%;
+  top: 45%;
+  list-style: none;
+  color: transparent; }
+  .flex-direction-nav li {
+    list-style: none; }
+    .flex-direction-nav li a {
+      display: block;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      cursor: pointer;
+      position: absolute; }
+
 .cent_boxs {
   display: inline-block;
   width: 100%; }
@@ -1426,6 +1538,9 @@ header {
     height: 100%;
     z-index: 2;
     background-color: #e53a29; }
+    @media screen and (max-width: 949px) and (min-width: 0) {
+      .work_boxs .aa {
+        width: 100%; } }
     .work_boxs .aa b {
       position: relative;
       display: inline-block;

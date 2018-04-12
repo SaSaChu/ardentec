@@ -38,7 +38,7 @@ $(function () {
 
 
    // 圖片縮放
-  $(".spic, .banner_page, ._ic").imgLiquid ();
+  $(".spic, .banner_page, ._ic, .flexslider, .slides").imgLiquid ();
   $(".work_boxs").each (function () {
     var $that = $(this);
 
@@ -65,6 +65,15 @@ $(function () {
     setInterval (function () {
       $that.find ('>a.left').click ();
     }, 6500);
+  });
+
+
+  // banner2
+  $(function(){
+    $('.flexslider').flexslider({
+        directionNav: true,
+        pauseOnAction: false
+    });
   });
 
 });
