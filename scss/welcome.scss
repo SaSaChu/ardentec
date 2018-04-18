@@ -168,6 +168,13 @@ $c_footer: rgba(208, 209, 211, 1.00);
             margin: 5px 0 0 0;
           }
         }
+
+        p {
+          display: inline-block;
+          width: calc(100% - 30px);
+          padding: 0;
+          margin: 0;
+        }
       }
     }
   }
