@@ -1543,7 +1543,8 @@ header {
   }
   .aa {
     position: absolute;
-    left: calc(100% / 3 - 300px + 10px);
+    left: calc(100% / 3 - 300px + 30px);
+
     top: 0;
     display: inline-block;
     width: 300px;
@@ -1561,13 +1562,13 @@ header {
       width: 100%;
       margin-top: 32px;
       text-align: left;
-      padding-left: 16px;
+      padding-left: 30px;
       font-size: 20px;
       color: white;
 
       &:after {
         position: absolute;
-        left: 16px;
+        left: 30px;
         bottom: -4px;
         display: inline-block;
         width: 20px;
@@ -1587,10 +1588,10 @@ header {
       background-color: rgba(202, 51, 30, 1.00);
     }
     &:before {
-      left: 8px;
+      left: 16px;
     }
     &:after {
-      right: 8px;
+      right: 16px;
     }
     span {
       position: relative;
@@ -1598,7 +1599,7 @@ header {
       width: 100%;
       margin-top: 32px + 16px;
       text-align: left;
-      padding-left: 20px;
+      padding-left: 30px;
       font-size: 22px;
       color: white;
       padding-right: 20px;
@@ -1606,7 +1607,7 @@ header {
     a {
       position: absolute;
       top: 100px + 430px - 22px;
-      left: 20px;
+      left: 30px;
       display: inline-block;
       color: white;
       text-decoration: none;
@@ -1697,12 +1698,13 @@ header {
     @for $i from 1 through 10 {
       &[data-i='#{$i}'] {
         @for $j from 1 through 10 {
-          >*:nth-child(#{$j - 1}) {
+          >*:nth-child(#{$j - 0}) {
             @include opacity(.5);
-            left: calc((100% / 3 + 10px) * #{$j - $i});
+            left: calc((100% / 3 + 30px) * #{$j - $i});
             @if($i == $j - 1) {
               @include opacity(1);
             }
+
             @include range-width(0, 1200px) {
               padding: 0 48px;
               @include opacity(0);
