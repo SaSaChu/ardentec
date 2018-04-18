@@ -64,11 +64,15 @@ $c_footer: rgba(208, 209, 211, 1.00);
 .block02 {
   display: inline-block;
   width: 100%;
-  background-image: url(../img/wo_bg.jpg);
   background-repeat: repeat-x;
   padding: 130px 0 210px 0;
   background-color: rgba(230, 69, 55, 1.00);
+  background-image: url(../img/wo_bg.jpg);
 
+  &.bg_blue {
+    background-image: url(../img/wb_bg.jpg);
+    background-color: rgba(75, 119, 203, 1.00);
+  }
 
   .w01 {
     display: inline-block;
@@ -95,6 +99,7 @@ $c_footer: rgba(208, 209, 211, 1.00);
 
     a {
       display: inline-block;
+      text-decoration: none;
       cursor: pointer;
       width: calc(100% / 3 - 3px * 2 / 3);
       float: left;
@@ -122,6 +127,17 @@ $c_footer: rgba(208, 209, 211, 1.00);
       &:hover, &:active {
         background-color: rgba(255, 255, 255, 1);
         color: $c_black;
+      }
+
+      &.w50 {
+        width: calc(100% / 2 - 55px * 1 / 2);
+        height: auto;
+        padding: 25px 0 25px 25px;
+        line-height: 26px;
+
+        &:last-child {
+          margin: 0 0 0 55px;
+        }
       }
     }
   }
