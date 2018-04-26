@@ -185,6 +185,11 @@ $c_footer: rgba(208, 209, 211, 1.00);
 .block03 {
   display: inline-block;
   width: 100%;
+  background-color: rgba(230, 69, 55, 1.00);
+
+  &.bblock {
+    background-color: rgba(77, 121, 201, 1.00);
+  }
 
   .w_fboxs {
     display: inline-block;
@@ -193,7 +198,7 @@ $c_footer: rgba(208, 209, 211, 1.00);
     padding: 35px 0;
     text-align: right;
     font-size: 14px;
-    color: $c_black;
+    color: white;
 
     @include range-width(0, 1200px) {
       padding: 15px 10px;
