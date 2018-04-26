@@ -220,6 +220,8 @@ $c_footer: rgba(208, 209, 211, 1.00);
 
     &.m_w_fboxs {
       display: none;
+      text-align: auto;
+      
       @include range-width(0, 450px) {
         display: inline-block;
       }
