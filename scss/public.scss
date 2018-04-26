@@ -1572,16 +1572,16 @@ header {
       font-size: 20px;
       color: white;
 
-      &:after {
-        position: absolute;
-        left: 30px;
-        bottom: -4px;
-        display: inline-block;
-        width: 20px;
-        height: 3px;
-        background-color: white;
-        content: '';
-      }
+      // &:after {
+      //   position: absolute;
+      //   left: 30px;
+      //   bottom: -4px;
+      //   display: inline-block;
+      //   width: 20px;
+      //   height: 3px;
+      //   background-color: white;
+      //   content: '';
+      // }
     }
 
     &:before, &:after {
