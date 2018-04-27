@@ -40,6 +40,10 @@ $c_footer: rgba(208, 209, 211, 1.00);
   overflow: hidden;
   background-color: white;
 
+  @include range-width(0, 1200px) {
+    padding: 0 10px;
+  }
+
   .w_ct {
     display: inline-block;
     width: 100%;
@@ -58,8 +62,22 @@ $c_footer: rgba(208, 209, 211, 1.00);
       width: 100%;
       max-width: 307px;
 
-      @include range-width(0, 900px) {
-        display: none;
+      @include range-width(735px, 990px) {
+        top: calc(50% - 65px);
+      }
+
+      @include range-width(665px, 735px) {
+        top: calc(50% - 59px);
+      }
+
+      @include range-width(520px, 665px) {
+        max-width: 250px;
+        top: calc(50% - 48px);
+      }
+
+      @include range-width(0, 520px) {
+        max-width: 200px;
+        top: calc(50% - 36px);
       }
 
       img {
