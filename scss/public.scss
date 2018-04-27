@@ -68,7 +68,7 @@ header {
   .top_boxs {
     display: inline-block;
     width: 90%;
-    height: 165px;
+    height: 110px;
     @include clearfix();
 
     @include range-width(450px, 1110px) {
@@ -82,7 +82,7 @@ header {
     .top_l, .top_r {
       display: inline-block;
       float: left;
-      padding-top: calc(165px / 2 - 45px);
+      padding-top: calc(133px / 2 - 45px);
 
       @include range-width(450px, 1110px) {
         padding-top: 30px;
@@ -108,7 +108,8 @@ header {
       img {
         display: inline-block; 
         width: 100%;
-        max-width: 260px;
+        max-width: 220px;
+        float: left;
 
         @include range-width(450px, 1110px) {
           max-width: 200px;
@@ -124,7 +125,7 @@ header {
 
     .top_r {
       width: calc(100% - 260px);
-      height: 165px;
+      height: 120px;
 
       @include range-width(450px, 1110px) {
         width: calc(100% - 200px);
@@ -140,7 +141,7 @@ header {
         }
 
         &:nth-child(2) {
-          margin-top: 18px;
+          margin-top: 9px;
 
           @include range-width(450px, 1110px) {
             margin-top: 8px;
@@ -834,7 +835,7 @@ header {
     .bt_boxs {
       display: inline-block;
       width: 100%;
-      height: 160px;
+      height: 110px;
       background-color: rgba(127, 127, 127, .5);
       position: absolute;
       z-index: 3;
@@ -878,7 +879,7 @@ header {
 }
 .flex-control-nav {
   position:absolute;
-  bottom:10px;
+  bottom:3px;
   z-index:5;
   width:100%;
   text-align:center;
@@ -964,7 +965,7 @@ header {
       display: inline-block;
       width: 100%;
       max-width: 850px;
-      padding: 50px 0;
+      padding: 25px 0;
       @include clearfix();
 
       @include range-width(450px, 910px) {
@@ -979,7 +980,7 @@ header {
         display: inline-block;
         cursor: pointer;
         width: calc(100% / 3 - 30px * 2 / 3);
-        height: 95px;
+        height: 80px;
         overflow: hidden;
         @include border-radius(10px);
         border: 2px solid $c_gray;
@@ -1582,6 +1583,10 @@ header {
       //   background-color: white;
       //   content: '';
       // }
+
+      @include range-width(0, 1200px) {
+        padding-left: 15px;
+      }
     }
 
     &:before, &:after {
@@ -1839,8 +1844,17 @@ footer {
       font-size: 13px;
       color: $c_black;
 
+      &.co_50 {
+        display: none;
+
+        @include range-width(0, 450px) {
+          display: inline-block;
+          float: none;
+        }
+      }
+
       @include range-width(0, 450px) {
-        text-align: left;
+        display: none;
       }
     }
   }
