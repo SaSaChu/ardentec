@@ -154,7 +154,7 @@ header {
                 height: 100px;
                 border-bottom: 1px solid rgba(163, 163, 163, 1.00);
 
-                top: calc(100% - 47px);
+                top: calc(100% - 17px);
 
                 padding-top: 47px;
                 padding-bottom: 30px;
@@ -484,7 +484,7 @@ header {
     left: 0;  
   }
 
-  > span, > a, > div > a {
+  > span, > a, > div > a, > div > div > a, > div > span {
     display: inline-block;
     width: 100%;
     padding:20px;
@@ -507,7 +507,7 @@ header {
     }
   }
 
-  > div > a {
+  > div > a, > div > div > a, > div > span {
     font-size: 16px;
     font-weight: 400px;
     background-color: rgba(38, 38, 39, 1.00);
@@ -518,7 +518,7 @@ header {
       background-color: $c_orange;
     }
   }
-  > span {
+  > span, > div > span {
     &:after {
       display: inline-block;
       content: '\e904';
@@ -533,11 +533,11 @@ header {
       }
     }
   }
-  > div {
+  > div, > div > div {
     display: none;
   }
 
-  > span {
+  > span, > div > span {
 
     &.ncu {
       cursor: auto;
