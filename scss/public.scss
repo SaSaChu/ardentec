@@ -987,6 +987,7 @@ header {
         border: 2px solid $c_gray;
         float: left;
         text-decoration: none;
+        background-color: white;
 
         @include range-width(450px, 910px) {
           width: calc(100% / 3 - 15px * 2 / 3);
