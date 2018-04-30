@@ -6,6 +6,12 @@
  */
  
 $(function () {
+  if ($(window).width () > 930) {
+    if ($(window).width () > 1110)
+      $('.flexslider').height ($(window).height () - 115 - 130);
+    else
+      $('.flexslider').height ($(window).height () - 135 - 130);
+  }
 
   // 回到上面按鈕
   $('#top_btn').click (function () {
