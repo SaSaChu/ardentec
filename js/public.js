@@ -8,9 +8,9 @@
 $(function () {
   if ($(window).width () > 930) {
     if ($(window).width () > 1110)
-      $('.flexslider').height ($(window).height () - 115 - 130);
+      $('.flexslider').height ($(window).height () - 115 - 130 - 200);
     else
-      $('.flexslider').height ($(window).height () - 135 - 130);
+      $('.flexslider').height ($(window).height () - 135 - 130 - 200);
   }
 
   // 回到上面按鈕
