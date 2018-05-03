@@ -6,6 +6,7 @@
  */
  
 $(function () {
+    $('.orange_box > a').imgLiquid ({ verticalAlign:'center' });
   if ($(window).width () > 930) {
     if ($(window).width () > 1110)
       $('.flexslider').height ($(window).height () - 115 - 130 - 200);

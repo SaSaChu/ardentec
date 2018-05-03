@@ -991,13 +991,13 @@ header {
 
         @include range-width(450px, 910px) {
           width: calc(100% / 3 - 15px * 2 / 3);
-          height: auto;
+          height: 150px;
         }
 
         @include range-width(0, 450px) {
           width: calc(100% / 3 - 10px * 2 / 3);
           @include border-radius(5px);
-          height: auto;
+          height: 100px;
         }
 
         &:focus {
