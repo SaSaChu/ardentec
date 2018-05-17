@@ -1172,7 +1172,7 @@ header {
             display: inline-block;
             width: 100%;
             max-width: 573px;
-            border: 2px solid rgba(195, 195, 195, 1.00);
+            // border: 2px solid rgba(195, 195, 195, 1.00);
 
             @include range-width(0, 880px) {
               max-width: none;
@@ -1359,7 +1359,7 @@ header {
             padding: 5px 0 0 38px;
             @include transition(all .3s);
             
-            &:hover, &:active {
+            &:hover, &:active, &.paa {
               text-decoration: underline;
             }
 
@@ -1372,7 +1372,7 @@ header {
             display: none;
           }
 
-          > span {
+          > span, a {
 
             &.ncu {
               cursor: auto;
