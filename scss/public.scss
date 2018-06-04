@@ -816,8 +816,12 @@ header {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: calc(100% - 58px);
-  margin-top: 58px;
+  height: 100%;
+
+  @include range-width(0, 450px) {
+    height: calc(100% - 58px);
+    margin-top: 58px;
+  }
 
   li {
     width: 100%;
