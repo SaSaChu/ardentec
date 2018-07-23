@@ -1001,7 +1001,7 @@ header {
         display: inline-block;
         cursor: pointer;
         width: calc(100% / 3 - 30px * 2 / 3);
-        height: 80px;
+        // height: 80px;
         overflow: hidden;
         @include border-radius(10px);
         border: 2px solid $c_gray;
@@ -1009,15 +1009,31 @@ header {
         text-decoration: none;
         background-color: white;
 
-        @include range-width(450px, 910px) {
+        @include range-width(825px, 910px) {
           width: calc(100% / 3 - 15px * 2 / 3);
-          height: 150px;
+          // height: 80px;
         }
 
-        @include range-width(0, 450px) {
+        @include range-width(580px, 825px) {
+          width: calc(100% / 3 - 15px * 2 / 3);
+          // height: 55px;
+        }
+
+        @include range-width(450px, 580px) {
+          width: calc(100% / 3 - 15px * 2 / 3);
+          // height: 40px;
+        }
+
+        @include range-width(321px, 450px) {
           width: calc(100% / 3 - 10px * 2 / 3);
           @include border-radius(5px);
-          height: 50px;
+          // height: 40px;
+        }
+
+        @include range-width(0, 321px) {
+          width: calc(100% / 3 - 10px * 2 / 3);
+          @include border-radius(5px);
+          // height: 30px;
         }
 
         &:focus {
@@ -1038,8 +1054,10 @@ header {
 
         img {
           display: inline-block;
-          // width: 100%;
-          height: 100%;
+          width: 100%;
+          max-width: 259px;
+          margin: 10px 0;
+          // height: 100%;
         }
       }
     }
