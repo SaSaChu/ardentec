@@ -81,11 +81,29 @@ $(function () {
 
 
   // banner2
-  $(function(){
-    $('.flexslider').flexslider({
-        directionNav: true,
-        pauseOnAction: false
-    });
+  $('.flexslider').flexslider({
+      directionNav: true,
+      pauseOnAction: false
+  });
+
+  $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div').mouseenter(function() {
+    $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div>div').removeClass('h');
+    var $that = $(this).find('>div').addClass('h');
+    clearTimeout($that.get(0)._t);
+  });
+  $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div').mouseleave(function() {
+    var $that = $(this).find('>div');
+
+    $that.get(0)._t = setTimeout(function() {
+      $that.removeClass('h');
+    }, 500);
+  });
+
+  $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div>div').mouseenter(function() {
+    console.error($(this).get(0)._t);
+    
+    clearTimeout($(this).get(0)._t);
+    $(this).get(0)._t = null;
   });
 
 });
