@@ -89,10 +89,12 @@ $(function () {
 
 
   // banner2
-  $('.flexslider').flexslider({
-      directionNav: true,
-      pauseOnAction: false
-  });
+  if (typeof $.fn.flexslider !== 'undefined') {
+    $('.flexslider').flexslider({
+        directionNav: true,
+        pauseOnAction: false
+    });
+  }
 
   $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div').mouseenter(function() {
     $('header .top_boxs .top_r .nav_boxs:nth-child(2)>div>div').removeClass('h');
