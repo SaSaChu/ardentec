@@ -1941,7 +1941,7 @@ footer {
 
 
 #top_btn {
-  display: inline-block;
+    display: inline-block;
   cursor: pointer;
   position: absolute;
   bottom: 120px;
@@ -1951,7 +1951,7 @@ footer {
   z-index: 25;
   color: rgba(251, 251, 251, 1);
   cursor: pointer;
-  background-color: $c_orange;
+  background-color: transparent;
   @include border-radius(30px);
   @include transition(all .3s);
   border: 2px solid rgba(251, 251, 251, 1);
@@ -1959,6 +1959,10 @@ footer {
   @include range-width(0, 450px) {
     display: none;
   }
+
+  // &.s {
+  //   display: inline-block;
+  // }
 
   &:before {
     display: inline-block;
@@ -1970,8 +1974,8 @@ footer {
   }
 
   &:hover, &:active {
-    color: rgba(251, 251, 251, 1);
-    border: 2px solid rgba(251, 251, 251, 1);
+    color: rgba(42, 46, 47, 1.00);
+    border: 2px solid rgba(42, 46, 47, 1.00);
   }
 }
 

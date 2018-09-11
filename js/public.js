@@ -18,6 +18,14 @@ $(function () {
   $('#top_btn').click (function () {
       $('html, body').animate ({ scrollTop: 0 }, 'slow');
   });
+  $(document).scroll(function() {
+    var y = $(this).scrollTop();
+    if (y > $(window).height() / 3) {
+      $('#top_btn').addClass('s');
+    } else {
+      $('#top_btn').removeClass('s');
+    }
+});
 
   // 漢堡變換 + menu滑出
   $(document).ready(function() {
