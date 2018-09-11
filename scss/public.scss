@@ -1954,6 +1954,7 @@ footer {
   background-color: transparent;
   @include border-radius(30px);
   @include transition(all .3s);
+  @include scale(.7);
   border: 2px solid rgba(251, 251, 251, 1);
 
   @include range-width(0, 450px) {
